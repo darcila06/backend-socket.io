@@ -25,6 +25,19 @@
                 console.log('Mensaje', payload)
             })
 
+            socket.on('nuevo-mensaje' ,function (payload) {
+                console.log('Mensaje', payload)
+                console.log('Consola', payload.nombre)
+                console.log('Mensaje', payload.mensaje)
+            })
+
+            socket.on('active-bands', function(payload){
+                console.clear();
+                console.table(payload);
+            })
+
+            
+
         </script>
 </body>
 </html>
